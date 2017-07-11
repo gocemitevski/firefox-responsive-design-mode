@@ -1,0 +1,144 @@
+:root {
+    --dark-gray: #424F5A;
+    --base-gray: #6A7B86;
+    --light-blue: #0095DD;
+    --dark-blue-gray: #37424C;
+    --blue: #00539F;
+    --button-padding: 8px 15px;
+    --button-border-radius: 3px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--dark-gray);
+    color: #EAEFF2;
+    font-family: sans-serif;
+}
+
+.container {
+    padding: 20px 30px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar button {
+    text-transform: uppercase;
+}
+
+.toolbar button,
+.toolbar select {
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+    border: none;
+    cursor: pointer;
+    transition: 100ms background-color ease-in-out 30ms;
+}
+
+.toolbar button:hover {
+    background-color: white;
+}
+
+.toolbar button:active {
+    box-shadow: inset 0 0 10px var(--light-blue);
+}
+
+.toolbar select {
+    color: white;
+    box-shadow: none;
+    background-image: none;
+    background-color: var(--dark-blue-gray);
+    -moz-appearance: none;
+}
+
+.toolbar select:hover {
+    background-color: var(--blue);
+}
+
+.form-group {
+    margin: 0 10px;
+}
+
+.form-group label {
+    text-transform: uppercase;
+    font-size: 80%;
+    margin-right: 5px;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox input+label {
+    padding: var(--button-padding);
+    border: 1px solid var(--base-gray);
+    border-radius: var(--button-border-radius);
+}
+
+.checkbox input+label:hover {
+    border-color: #aaa;
+}
+
+.checkbox input+label:active {
+    box-shadow: inset 0 0 10px var(--base-gray);
+}
+
+.checkbox input:checked+label {
+    color: white;
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: 10px;
+    opacity: 0.18;
+}
+
+.page-title {
+    /*text-transform: uppercase;*/
+    color: var(--base-gray);
+    text-shadow: 0 -1px 0 var(--dark-blue-gray);
+    font-size: 100%;
+    font-weight: 400;
+    margin-right: 3%;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.screen {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.screen-size {
+    color: var(--light-blue);
+    font-size: 90%;
+}
+
+.screen-size .separator {
+    margin: 0 5px;
+}
+
+.viewport {
+    margin: 30px 0;
+    background-color: var(--base-gray);
+    border: 1px solid var(--light-blue);
+    width: 320px;
+    height: 480px;
+}
